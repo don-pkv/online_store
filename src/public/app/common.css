@@ -1,0 +1,42 @@
+#navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: rgb(231, 231, 231);
+}
+
+#footer {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  position: static;
+  bottom: 0px;
+  background-color: rgb(231, 231, 231);
+}
+
+#content {
+height:auto;
+}
+
+
+#collect{
+  background: url('/resource/bg-1.jpg') ;
+  background-size: 100% 100%;
+  
+}
+
+.jumbotron {
+  background-color: rgba(31, 34, 22, 0.151);
+ 
+}
+.jumbotron-heading{
+  background-color: rgba(102, 205, 171, 0.397);
+}
+
+
+.item0{
+  background: rgba(102, 205, 171, 0.397);
+  color: #fff !important ;
+}
+div h1 span{
+  color: #fff !important ;
+}

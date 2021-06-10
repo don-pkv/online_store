@@ -1,0 +1,25 @@
+<div class="container my-2">
+  <h1 class="h1 text-center"><span class="item0">ADD ITEM </span></h1>
+  
+
+  <form action="/api/item" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="item_name">Item Name</label>
+      <input type="text" class="form-control form-control-lg" name="item_name" id="item_name" placeholder="Enter name of the item" rows="3"></input>
+    </div>
+    <div class="form-group">
+      <label for="item_description">Item Description</label>
+    <textarea class="form-control form-control-sm" name="item_description" id="item_description" placeholder="Enter description"rows="4"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="item_link">Item Link</label>
+      <input type="url" class="form-control form-control-sm" name="item_link" id="item_link" placeholder="Enter link of the item" rows="3"></input>
+    </div>
+    <div class="form-group">
+      <label for="item_avatar">Item Image</label>
+      <input type="file" class="form-control form-control-sm" name="item_avatar" id="item_avatar" placeholder="Select image of the item" rows="3"></input>
+    </div>
+    <button type="submit" id="write-btn" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<script src='../app/add_item.js'></script>
