@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
 */
 
 const PORT=process.env.PORT||5353
-db.sync({force:true})
+db.sync()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`server started on ${PORT}`)
