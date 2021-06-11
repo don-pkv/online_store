@@ -1,7 +1,9 @@
 /*const { REVIEW }= require('../db/model')
 
-async function findReview(item_id){
-    const reviews= await ITEM.findAllItem({include: [ITEM],where:{item_id}})
+async function findReview(query){
+    const where={}
+    where.item_id=req.query.item_id
+    const reviews= await ITEM.findAllItem({include: [ITEM],where})
     return reviews
 }
 

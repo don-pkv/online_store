@@ -1,7 +1,9 @@
 const{ITEM}=require('../db/model')
 
-async function findAllItem(){
-    const items= await ITEM.findAll()
+async function findAllItem(query)
+{   let where = {}
+    if(query.item_id){where.item_id=query.item_id}
+    const items= await ITEM.findAll({where})
     return items
 }
 

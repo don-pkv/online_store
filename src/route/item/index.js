@@ -7,10 +7,10 @@ const upload = multer({dest: 'uploads/'})
 const route= Router()
 
 const{findAllItem,addItem}=require('../../controller/item')
-//const{findReview,addReview}=require('../../controller/review')
+const{findReview,addReview}=require('../../controller/review')
 
 route.get('/',async (req,res)=>{
-    const items= await findAllItem()
+    const items= await findAllItem(req.query)
     if(!items){ return res.status(200).redirect('/')}
     res.status(200).send(items)
 })
@@ -33,8 +33,8 @@ route.post('/', upload.single('item_avatar'), async (req, res) => {
   
     res.status(201).redirect('/')
   })
-
-/*route.get('/review', async (req,res)=>{
+/*
+route.get('/review', async (req,res)=>{
     const item_id=req.body.item.item_id
    
     const reviews = await findReview(item_id)
@@ -42,7 +42,7 @@ route.post('/', upload.single('item_avatar'), async (req, res) => {
     res.status(201).send(reviews)
 })
 
-route.post('/review/:item_id',async (req,res)=>{
+route.post('/review',async (req,res)=>{
     const item_id=req.params.item_id
     const author= req.body.item_author
     const description= req.body.item_description
