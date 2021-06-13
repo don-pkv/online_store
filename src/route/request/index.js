@@ -2,7 +2,13 @@ const Router= require('express')
 
 const route= Router()
 
-const { makeRequest } = require('../../controller/request')
+const { makeRequest,showRequest } = require('../../controller/request')
+
+route.get('/',async (req,res)=>{
+    const requests= await showRequest()
+    if(!requests){ return res.status(200).redirect('/')}
+    res.status(200).send(requests)
+})
 
 route.post('/', async (req, res) => {
 
