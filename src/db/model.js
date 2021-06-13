@@ -56,8 +56,23 @@ const REVIEW = db.define('review', {
 ITEM.hasMany(REVIEW)
 REVIEW.belongsTo(ITEM)
 */
+
+const REQUEST = db.define('request', {
+  request_id: COL_ITEM_ID,
+  request_name: COL_ITEM_NAME,
+  request_contact:{
+    type: Sequelize.DataTypes.TEXT('tiny'),
+    allowNull: false,
+  },
+  request_description: {
+    type: Sequelize.DataTypes.TEXT,
+    allowNull: false,
+  }
+})
+
 module.exports = {
   db,
-  ITEM
+  ITEM,
+  REQUEST
  // REVIEW
 }

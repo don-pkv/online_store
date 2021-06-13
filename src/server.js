@@ -3,6 +3,7 @@ const session = require('express-session')
 
 const { db } = require('./db/model')
 const { itemRoute } = require('./route/item')
+const{requestRoute}=require('./route/request')
 
 const app = express()
 app.use(express.json())
@@ -15,6 +16,7 @@ app.use(session({
   }))
   
 app.use('/api/item', itemRoute)
+app.use('/api/request',requestRoute)
 app.use('/', express.static(__dirname +'/public'))
 app.use('/images', express.static(__dirname +'/images'))
 
@@ -25,7 +27,7 @@ app.get('/',(req,res)=>{
 */
 
 const PORT=process.env.PORT||5353
-db.sync()
+db.sync({force:true})
   .then(() => {
     app.listen(PORT, () => {
       console.log(`server started on ${PORT}`)
