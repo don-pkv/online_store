@@ -6,13 +6,33 @@ const fs = require('fs').promises
 const upload = multer({dest: 'uploads/'})
 const route= Router()
 
-const{findAllItem,addItem}=require('../../controller/item')
+const{findAllItem,addItem,findOneItem}=require('../../controller/item')
 //const{findReview,addReview}=require('../../controller/review')
 
 route.get('/',async (req,res)=>{
     const items= await findAllItem()
     if(!items){ return res.status(200).redirect('/')}
     res.status(200).send(items)
+})
+
+
+route.get('/:id', async (req, res) => {
+    let item;
+    console.log(req.params.id)
+    
+    item= await findOneItem(req.params.id)
+    
+    console.log(item)
+    
+    if (item) {
+        res.status(200).send(item)
+    } 
+
+    else {
+      res.status(404).send({
+      error: 'No such user item exist'
+    })
+    }
 })
 
 route.post('/', upload.single('item_avatar'), async (req, res) => {

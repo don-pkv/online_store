@@ -16,7 +16,6 @@ app.use(session({
   }))
   
 app.use('/api/item', itemRoute)
-app.use('/api/request',requestRoute)
 app.use('/', express.static(__dirname +'/public'))
 app.use('/images', express.static(__dirname +'/images'))
 
@@ -27,7 +26,7 @@ app.get('/',(req,res)=>{
 */
 
 const PORT=process.env.PORT||5353
-db.sync({force:true})
+db.sync()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`server started on ${PORT}`)
