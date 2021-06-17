@@ -1,4 +1,4 @@
-/*const { REVIEW }= require('../db/model')
+const { REVIEW }= require('../db/model')
 
 async function findReview(query){
     const where={}
@@ -23,4 +23,3 @@ async function addReview( author,description,item_id){
 module.exports={
 findReview,addReview
 }
-*/

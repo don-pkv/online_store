@@ -11,8 +11,8 @@ function loadItem() {
                       $(`
                         
                       
-                        <div class="col-md-4" >
-                          <a class="item_123" data-component="${i.item_id}">   
+                        <div class="col-md-4 item_123 data-component="${i.item_id}" >
+                             
                             <div class="card mb-4 shadow-sm" data-component="${i.item_id}">
                               <image src="${i.item_avatar}" class=" card-img-top" alt="Item image" data-component="${i.item_id}"></image>
                               <div class="card-body" data-component="${i.item_id}">
@@ -23,7 +23,7 @@ function loadItem() {
                                 </div>
                               </div>
                             </div>
-                          </a>
+                        
                         </div>
                                       
                         `)

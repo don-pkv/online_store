@@ -1,10 +1,15 @@
 const{ITEM}=require('../db/model')
 
-async function findAllItem(query)
-{   let where = {}
-    if(query.item_id){where.item_id=query.item_id}
-    const items= await ITEM.findAll({where})
+async function findAllItem()
+{  
+    const items= await ITEM.findAll()
     return items
+}
+
+async function findOneItem(id)
+{   
+    console.log(id)
+    return await ITEM.findByPk(id) 
 }
 
 async function addItem(item_name,item_description,item_link,item_avatar){
@@ -21,5 +26,5 @@ async function addItem(item_name,item_description,item_link,item_avatar){
     return item
 }
 module.exports={
-findAllItem,addItem
+findAllItem,addItem,findOneItem
 }
