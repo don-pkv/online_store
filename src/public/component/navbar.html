@@ -1,22 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" href="#"> ONLINE SHOPPING HELP</a>
-  <div class="collapse navbar-collapse " id="navbarNav">
-    <div class="d-flex ml-auto ">
-      <ul class="navbar-nav">
-       <li class="nav-item active">
-          <a class="nav-link" href="#" data-component="all-item">
-            Home
-          </a>
-        </li>
-     <!--  <li class="nav-item ">
-          <a class="nav-link" href="#" data-component="add-item">
-            Add Item
-          </a>
-        </li>
-      -->
-      </ul>
-    </div>
-  </div> 
-</nav>
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm navbar-light lighten-4 ml-auto">
 
+  <!-- Navbar brand -->
+ <div class="container">
+    <a class="navbar-brand" href="/">ONLINE SHOPPING</a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="menu">
+  
+    <ul class="navbar-nav text-center ml-auto">
+       <li class="nav-item">
+          <a class="nav-link" href="#" data-component="all-item">ALL ITEMS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-component="add-item" style="display: none ;">ADD ITEMS</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-component="show-req">SHOW REQUESTS</a>
+        </li>
+ 
+        <li class="nav-item" ></li>
+          <a class="nav-link" href="#" data-component="make-req">MAKE REQUEST</a>
+        </li>
+      
+        <span id="admin-username-1">
+        </span>
+       <li class="nav-item">
+        <a class="nav-link" href="#" data-component="admin-login">ADMIN LOGIN</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="/api/admin/logout" data-component="admin-logout" style="display: none ;">LOGOUT</a>
+       </li>
+       
+
+     </ul>
+
+  </div>
+ </div>
+</nav>
 <script src="/app/navbar.js"></script>

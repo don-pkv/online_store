@@ -28,6 +28,15 @@ const COL_ITEM_NAME = {
   unique:true
 }
 
+const ADMIN = db.define('admin', {
+  admin_id: COL_ITEM_ID,
+  admin_name: COL_ITEM_NAME,
+  admin_password: {
+    type: Sequelize.DataTypes.STRING(40),
+    allowNull: false,
+  }
+})
+
 const ITEM = db.define('item', {
   item_id: COL_ITEM_ID,
   item_name: COL_ITEM_NAME,
@@ -44,6 +53,7 @@ const ITEM = db.define('item', {
     allowNull: false
   }
 })
+
 /*
 const REVIEW = db.define('review', {
   review_id: COL_ITEM_ID,
@@ -56,8 +66,24 @@ const REVIEW = db.define('review', {
 ITEM.hasMany(REVIEW)
 REVIEW.belongsTo(ITEM)
 */
+
+const REQUEST = db.define('request', {
+  request_id: COL_ITEM_ID,
+  request_name: COL_ITEM_NAME,
+  request_contact:{
+    type: Sequelize.DataTypes.TEXT('tiny'),
+    allowNull: false,
+  },
+  request_description: {
+    type: Sequelize.DataTypes.TEXT,
+    allowNull: false,
+  }
+})
+
 module.exports = {
   db,
-  ITEM
+  ADMIN,
+  ITEM,
+  REQUEST
  // REVIEW
 }

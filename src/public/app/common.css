@@ -5,6 +5,13 @@
   background-color: rgb(231, 231, 231);
 }
 
+
+label {
+ background-color: rgba(102, 205, 171, 0.397);
+ color: white;
+
+}
+
 #footer {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
@@ -39,4 +46,8 @@ height:auto;
 }
 div h1 span{
   color: #fff !important ;
+}
+
+button{
+  background:var(--light);
 }

@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "```shell\r mysql -u root\r ```",
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js"
@@ -9,11 +9,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "hbs": "^4.1.2",
     "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "sequelize": "^6.6.2",
     "sqlite3": "^5.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/don-pkv/online_store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/don-pkv/online_store/issues"
+  },
+  "homepage": "https://github.com/don-pkv/online_store#readme"
 }
