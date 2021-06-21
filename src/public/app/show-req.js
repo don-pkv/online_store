@@ -1,4 +1,4 @@
-/*function loadRequest() {
+function loadRequest() {
     $.get('/api/request', (requests) => {
       $('#item-container').append(
          $(`  
@@ -31,4 +31,4 @@
       )
     })
   }
- */
+ 

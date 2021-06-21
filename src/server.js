@@ -1,7 +1,11 @@
 const express = require('express')
 const session = require('express-session')
+const { passport } = require('./passport-setup')
+
 
 const { db } = require('./db/model')
+
+const{ adminRoute } =require('./route/admin')
 const { itemRoute } = require('./route/item')
 const{requestRoute}=require('./route/request')
 
@@ -14,10 +18,16 @@ app.use(session({
     saveUninitialized: true,
     secret: '24knb6k247b2k7b2k7bk247hb2kh7b2',
   }))
-  
+
+app.use(passport.initialize())
+app.use(passport.session({secret:'24knb6k247b2k7b2k7bk247hb2kh7b2'}))
+
 app.use('/api/item', itemRoute)
+app.use('/api/admin', adminRoute)
+app.use('/api/request',requestRoute)
 app.use('/', express.static(__dirname +'/public'))
 app.use('/images', express.static(__dirname +'/images'))
+
 
 /*
 app.get('/',(req,res)=>{

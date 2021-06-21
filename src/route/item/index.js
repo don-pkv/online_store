@@ -37,8 +37,6 @@ route.get('/:id', async (req, res) => {
 
 route.post('/', upload.single('item_avatar'), async (req, res) => {
 
-    console.log('req.body', req.body)
-    console.log('req.file', req.file)
     const oldPath = 'uploads/' + req.file.filename
     const newPath = 'images/' + 'avatar_' + req.body.item_name + '.' + req.file.mimetype.split('/').pop()
   

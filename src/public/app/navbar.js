@@ -1,4 +1,4 @@
-(()=>{
+/*(()=>{
     (function($){
        "use strict";
         var NAY={};
@@ -14,7 +14,7 @@
         NAY.MenuTogglerClose();
         });
   })(jQuery);
-})
+})*/
 
 let navlinks = $('.navbar-nav .nav-link')
 
