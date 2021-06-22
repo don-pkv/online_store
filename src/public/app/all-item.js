@@ -19,7 +19,7 @@
                                    <p class="card-text" data-component="${i.item_id}">${i.item_name}</p>
                                    <p class="card-text" data-component="${i.item_id}">${i.item_description.substr(0,60)}</p>
                                    <div class="d-flex justify-content-between align-items-center" data-component="${i.item_id}">
-                                     <button type="button" id ="btn_redirect"class="btn btn-sm btn-outline-secondary "><a href="${i.item_link}">${i.item_link.substr(0,40)}</a></button>                
+                                     <button type="button" id ="btn_redirect"class="btn btn-sm btn-outline-secondary "><a href="${i.item_link}">CLICK TO BUY IT</a></button>                
                                    </div>
                                  </div>
                                </div>
