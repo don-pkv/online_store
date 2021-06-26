@@ -1,6 +1,6 @@
 $('#write-btn').click(() => {
     
-   //   $('#content').load('/component/all-item.html')
+      $('#content').load('/component/all-item.html')
     
   })
   
