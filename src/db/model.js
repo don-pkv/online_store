@@ -41,11 +41,11 @@ const ITEM = db.define('item', {
   item_id: COL_ITEM_ID,
   item_name: COL_ITEM_NAME,
   item_description: {
-    type: Sequelize.DataTypes.TEXT,
+    type: Sequelize.DataTypes.TEXT('medium'),
     allowNull: false,
   },
   item_link:{
-    type: Sequelize.DataTypes.TEXT('tiny'),
+    type: Sequelize.DataTypes.TEXT,
     allowNull: false
   },
   item_avatar:{
